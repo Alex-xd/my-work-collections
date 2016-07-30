@@ -25,3 +25,4 @@
 
 [计时器](http://boyuanblog.com/My-Work-Collections/2016-7/3-the-countdown/countdown.html)
 
+[天气预报(ajax)](http://boyuanblog.com/My-Work-Collections/2016-7/6-weather-ajax/weather-5-days.html)
