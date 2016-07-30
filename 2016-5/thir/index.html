@@ -1,0 +1,181 @@
+<!--
+   Created by Boyuan.   2016/5/27
+-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>校园说张博元</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<!-- 顶部 -->
+<div class="top">
+    <div class="top-holder clear-float">
+        <div class="left">
+            <a class="ico" href="#"></a>
+            <a class="p" href="#">首页</a>
+        </div>
+        <div class="right">
+            <a class="p1" href="#">什么是校园说？</a>
+            <span class="separator">|</span>
+            <a href="#">登陆</a><span class="slash">/</span><a href="#">注册</a>
+        </div>
+    </div>
+</div>
+<!-- 首部导航 -->
+<div class="header clear-float">
+    <a href="#"><img src="images/logo.jpg" alt="Campussay" title="校园说"></a>
+    <div class="chose-sch">
+        <p>重庆邮电大学</p>
+        <a href="javascript:;">切换学校</a>
+    </div>
+    <ul class="nav">
+        <li class="talking-sort"><a href="javascript:;">Talking分类</a></li>
+        <li><a href="#">首页</a></li>
+        <li><a href="#">听听堂</a></li>
+        <li><a href="#" class="in-this-page">发布Talking</a></li>
+        <li><a href="#">我在校园说</a></li>
+    </ul>
+</div>
+<!-- 表单 -->
+<div class="form-holder">
+    <h2 class="index-title">你今天想说什么?</h2>
+    <ul class="form-list">
+        <li class="form-1">
+            <ul>
+                <li class="input">
+                    <span class="title must-be-formed">标题 :</span>
+                    <input class="input-362px" type="text" name="标题">
+                    <span class="hint">还可以输入20字</span>
+                </li>
+                <li class="input">
+                    <span class="title must-be-formed">分类 :</span>
+                    <select>
+                        <option value="1">请选择</option>
+                        <option value="1">请选择</option>
+                        <option value="1">请选择</option>
+                    </select>
+                    <select>
+                        <option value="1">请选择</option>
+                        <option value="1">请选择</option>
+                        <option value="1">请选择</option>
+                    </select>
+                    <select>
+                        <option value="1">请选择</option>
+                        <option value="1">请选择</option>
+                        <option value="1">请选择</option>
+                    </select>
+                    <p class="input-tip with-ico">如果没有找到你的分类，请选择“其他”，我们后续将创建对应的分类</p>
+                </li>
+                <li class="input">
+                    <span class="title must-be-formed">人数 :</span>
+                    <input class="input-100px" type="text" name="人数" placeholder="最多参与人数">
+                    <span class="input-tip">人</span>
+                </li>
+                <li class="input">
+                    <span class="title must-be-formed">价格 :</span>
+                    <input class="input-100px" type="text" name="价格">
+                    <span class="input-tip">元/人</span>
+                </li>
+            </ul>
+        </li>
+        <li class="form-2">
+            <ul>
+                <li class="input">
+                    <span class="title must-be-formed">交流模式 : </span>
+                    <label for="offline">
+                        <input type="radio" id="offline" value="0" name="1"/>
+                        <span class="check-box"></span>
+                        <span class="title">线下</span>
+                    </label>
+                    <label for="online">
+                        <input type="radio" id="online" value="1" name="1"/>
+                        <span class="check-box"></span>
+                        <span class="title">线上</span>
+                    </label>
+                    <div class="input-address-wrap">
+                        <input class="input-362px" type="text" placeholder="请填写具体地址\可商议地址"
+                               style="margin:12px 0 0 92px;">
+                    </div>
+                </li>
+                <li class="input">
+                    <span class="title">联系方式 :</span>
+                    <input type="text" style="border: none;">
+                    <p class="input-tip with-ico">交流开始前半小时，系统将您联系方式发送给对方</p>
+                </li>
+            </ul>
+        </li>
+        <li class="form-3">
+            <ul>
+                <li class="input">
+                    <span class="title">上传图片 :</span>
+                    <div class="img-uploader-holder">
+                        <label for="img-uploader" class="img-uploader">
+                            <img src="images/upload.png" alt="上传图片">
+                        </label>
+                        <input id="img-uploader" type="file" name="upload">
+                    </div>
+                    <p class="input-tip with-ico">上传一张图片</p>
+                </li>
+            </ul>
+        </li>
+        <li class="form-4" style="border: none;">
+            <ul>
+                <li class="input">
+                    <span class="title must-be-formed">交流产品介绍 :</span>
+                    <input type="text" style="border: none;">
+                </li>
+
+                <li class="input">
+                    <span class="title">交流安排 :</span>
+                    <span class="title must-be-formed">交流时间 :</span>
+                    <input class="input-100px" type="text" placeholder="YYYY-MM-DD" name=期日其">
+                    <input class="input-75px" type="text" placeholder="上课时间" name="上课时间">
+                    <span>至</span>
+                    <input class="input-75px" type="text" placeholder="下课时间" style="margin-left:5px;">
+                    <div class="talk-content">
+                        <span class="title must-title">交流内容 :</span>
+                        <input type="text" name="交流内容">
+                    </div>
+                </li>
+                <li class="input">
+                    <span class="title" style="vertical-align:top;">交流详情:</span>
+                    <div class="RTE">
+                        <!-- 加载编辑器的容器 -->
+                        <script id="container" name="content" type="text/plain"></script>
+                        <!-- 配置文件 -->
+                        <script type="text/javascript" src="ueditor/ueditor.config.js"></script>
+                        <!-- 编辑器源码文件 -->
+                        <script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+                        <!-- 实例化编辑器 -->
+                        <script type="text/javascript">
+                            var ue = UE.getEditor('container');
+                        </script>
+                    </div>
+                    <a href="#" class="submit"></a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="footer">
+    <div class="footer-holder clear-float">
+        <div class="contact-icon">
+            <a href="#"><img src="images/logo2.gif" alt="campussay"></a>
+            <a class="weibo" href="#"></a>
+            <a class="weixin" href="#"></a>
+        </div>
+        <div class="about">
+            <a href="#">关于校园说</a>
+            <a href="#">帮助中心</a>
+            <a href="#">联系我们</a>
+            <p>Copyrights © 2015-2016 CampusSay Co.,Ltd. All Rights Reserved.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
