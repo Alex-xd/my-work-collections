@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>move1</title>
+    <style>
+
+        .box {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50px;
+            left: 300px;
+            background-color: red;
+        }
+
+        .line {
+            height: 300px;
+            width: 1px;
+            background: #000;
+            position: fixed;
+            left: 300px;
+            top: 0;
+        }
+
+    </style>
+    <script>
+        var timer = null;
+
+        function startMove(iTarget) {
+            var odiv = document.getElementsByClassName("box")[0];
+
+            clearInterval(timer);
+
+            timer = setInterval(function () {
+                var iSpeed = (iTarget - odiv.offsetLeft) / 300;
+
+                iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+
+                if (odiv.offsetLeft == iTarget) {
+                    clearInterval(timer);
+                }
+                else {
+                    odiv.style.left = odiv.offsetLeft + iSpeed + "px";
+                }
+            }, 30);
+        }
+    </script>
+</head>
+<body>
+<input type="submit" onclick="startMove(0)">
+<div class="box"></div>
+<div class="line"></div>
+</body>
+</html>
