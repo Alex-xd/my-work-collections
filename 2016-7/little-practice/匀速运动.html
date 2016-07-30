@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>move1</title>
+    <style>
+
+        .box {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            background-color: red;
+        }
+
+        .line {
+            height: 300px;
+            width: 1px;
+            background: #000;
+            position: fixed;
+            left: 300px;
+            top: 0;
+        }
+    </style>
+    <link rel="stylesheet" href="main.css">
+    <script>
+        var timer = null;
+
+        function startMove(iTarget) {
+            var odiv = document.getElementsByClassName("box")[0];
+            var iSpeed=0;
+
+            if (odiv.offsetLeft < iTarget) {
+                iSpeed = 7;
+            }
+            else {
+                iSpeed = -7;
+            }
+
+            clearInterval(timer); //防止连续点击造成的速度越来越快   不信把这行去掉试试看?
+
+            timer = setInterval(function () {
+                if (Math.abs(odiv.offsetLeft - iTarget) < 7) { //用当前位置和终点位置的差值距离判断是否到达   联想一下打车到我家,是到门口下车,不是把车开到家里面才停。  所以让odiv到这个范围就好
+                    clearTimeout(timer);
+                    odiv.style.left = iTarget + "px";
+                }
+                else {
+                    odiv.style.left = odiv.offsetLeft + iSpeed + "px";  //运动中
+                    document.title = odiv.offsetLeft;
+                }
+            }, 30);
+        }
+    </script>
+</head>
+<body>
+<input type="submit" onclick="startMove(300)">
+<div class="box"></div>
+<div class="line"></div>
+</body>
+</html>
