@@ -5,7 +5,7 @@
 
 [静态页面2](http://boyuanblog.com/My-Work-Collections/2016-5/sec/myCampussay/index.html)
 
-[静态页面3](My-Work-Collections/2016-5/thir/index.html)
+[静态页面3](http://boyuanblog.com/My-Work-Collections/2016-5/thir/index.html)
 
 [静态页面4](http://boyuanblog.com/My-Work-Collections/2016-7/0-static-page/page1/index.html)
 
