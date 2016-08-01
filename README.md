@@ -17,6 +17,8 @@
 
 [下拉列表](http://boyuanblog.com/My-Work-Collections/2016-7/1-menu-list/1-menu-list.html)
 
+[自定义样式select选单](http://boyuanblog.com/My-Work-Collections/others/customize-select/select.html)
+
 [tab栏切换](http://boyuanblog.com/My-Work-Collections/2016-7/2-tab-switch/2-tab-switch.html)
 
 [计算器](http://boyuanblog.com/My-Work-Collections/2016-7/5-caculator/calculator-js.html)
