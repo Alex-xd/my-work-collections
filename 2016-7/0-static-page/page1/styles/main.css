@@ -281,36 +281,17 @@
   height: 87px;
   margin-top: 50px;
   padding-top: 16px;
-  overflow: hidden;
+  position: relative;
   background-color: #fff;
   border: 1px solid #dddee0;
-}
-.detail-search-box .options-list-1 {
-  display: inline-block;
-  width: 70px;
-  height: 26px;
-  margin-left: 16px;
-  padding: 8px 0 0 8px;
-  float: left;
-  background: url("../images/search-detail-1.gif");
-}
-.detail-search-box .options-list-2 {
-  display: inline-block;
-  width: 120px;
-  height: 26px;
-  margin-left: 16px;
-  padding: 8px 0 0 8px;
-  float: left;
-  background: url("../images/search-detail-2.gif");
 }
 .detail-search-box .options-list-date {
   display: inline-block;
   width: 120px;
   height: 26px;
-  margin-left: 16px;
+  margin-left: 10px;
   padding: 8px 0 0 8px;
   float: left;
-  background: url("../images/search-detail-date.gif");
 }
 /*  查询项
 ============================================================================ */
@@ -326,14 +307,55 @@
   color: #b0b0b0;
   line-height: 28px;
 }
+/* 下拉菜单
+============================================================================ */
+.select {
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+}
+.item-select-input {
+  height: 26px;
+  position: relative;
+  text-indent: 8px;
+  border: 1px solid #d5d5d5;
+  border-radius: 2px 2px 0 0;
+  background: url("../images/downarrow.png") no-repeat 90% center;
+}
+.item-select-input:focus {
+  border: 1px solid #2189bf;
+}
+.isi-style-1 {
+  width: 70px;
+}
+.isi-style-2 {
+  width: 120px;
+}
+.select-content {
+  min-height: 40px;
+  max-height: 130px;
+  position: relative;
+  text-indent: 8px;
+  line-height: 26px;
+  z-index: 999;
+  overflow: auto;
+  background-color: #fff;
+  border: 1px solid #d5d5d5;
+  border-top: #fff;
+  border-radius: 0 0 2px 2px;
+}
+.select-content li:hover {
+  background-color: #6a7c90;
+  cursor: pointer;
+}
 /*  买方卖方
 ============================================================================ */
 .ds-saler-buyer {
   width: 190px;
   display: inline-block;
   float: left;
+  position: relative;
   margin-left: 40px;
-  overflow: hidden;
   background: url("../images/search-detail-4.gif") no-repeat right;
 }
 .ds-saler-buyer span {
@@ -345,14 +367,12 @@
 .ds-saler-buyer .buyer {
   width: 160px;
   height: 28px;
-  float: left;
-  overflow: hidden;
+  position: relative;
 }
 .ds-saler-buyer .saler {
   width: 160px;
   height: 28px;
-  float: left;
-  overflow: hidden;
+  position: relative;
 }
 .ds-saler-buyer .switch-btn {
   display: inline-block;
@@ -363,22 +383,38 @@
 /*  查询详细选项
 ============================================================================ */
 .ds-details {
-  width: 340px;
+  width: 390px;
+  height: 61px;
   display: inline-block;
   float: left;
+  position: relative;
   margin-left: 16px;
-  overflow: hidden;
 }
 .ds-details > div {
-  overflow: hidden;
+  position: absolute;
   display: inline-block;
-  margin-left: 16px;
+}
+.ds-details .date {
+  top: 0;
+  left: 0;
+}
+.ds-details .time {
+  top: 0;
+  left: 183px;
+}
+.ds-details .people {
+  top: 35px;
+  left: 0;
+}
+.ds-details .deals {
+  top: 35px;
+  left: 122px;
 }
 .ds-details span {
   float: left;
   font-size: 12px;
   color: #b0b0b0;
-  line-height: 28px;
+  line-height: 26px;
 }
 /*  提交按钮
 ============================================================================ */
@@ -589,7 +625,7 @@
 .pt-table-box .nav {
   height: 28px;
 }
-.pt-table-box .nav a {
+.pt-table-box .nav .nav-item {
   display: inline-block;
   position: relative;
   top: 2px;
@@ -600,9 +636,10 @@
   text-align: center;
   line-height: 28px;
   color: #535353;
-  border: 2px solid #fff;
+  border: 2px solid #f4f5f6;
   border-radius: 7px 7px 0 0;
   border-bottom: 2px solid #e7e9eb;
+  cursor: pointer;
 }
 .pt-table-box .nav a:hover {
   background-color: #fff;
@@ -610,21 +647,41 @@
   border-bottom: none;
   border-radius: 7px 7px 0 0;
 }
-.pt-table-box .table-border-box {
+.pt-table-box .nav .on-focus {
+  background-color: #fff;
+  border: 2px solid #e7e9eb;
+  border-bottom: none;
+  border-radius: 7px 7px 0 0;
+}
+.table-border-box {
   width: 490px;
   height: 250px;
   border: 2px solid #e7e9eb;
   overflow: hidden;
-  border-radius: 7px;
+  border-radius: 0 0 7px 7px;
 }
 .pt-table-box .tab {
+  display: none;
   margin: 28px auto;
   border-right: 1px solid #e7e9eb;
   border-bottom: 1px solid #e7e9eb;
   text-align: center;
   color: #a5a5a5;
 }
+.pt-table-box .on-show {
+  display: table;
+}
 .pt-table-box .tab td {
+  font-size: 12px;
+  font-family: 宋体;
+  width: 100px;
+  border-left: 1px solid #e7e9eb;
+  border-top: 1px solid #e7e9eb;
+}
+.pt-table-box .tab td:hover {
+  font-size: 12px;
+  font-family: 宋体;
+  background-color: #f4f5f6;
   width: 100px;
   border-left: 1px solid #e7e9eb;
   border-top: 1px solid #e7e9eb;
@@ -910,12 +967,15 @@
   text-align: left;
   padding-left: 30px;
 }
+.car-ranking-table #no-hover-color {
+  background: #d5d7d9;
+}
 .car-ranking-table tr:hover {
-  background-color: #e7e9eb;
+  background-color: #d5d7d9;
 }
 .car-ranking-table td {
   height: 24px;
-  border: 2px solid #e7e9eb;
+  border: 1px solid #e7e9eb;
 }
 .car-ranking-table .rank {
   width: 66px;

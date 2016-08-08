@@ -18,8 +18,6 @@
   }
 }
 
-
-
 /* ==========================================================================
  ===   顶栏   ====================================================================
  ============================================================================ */
@@ -31,8 +29,6 @@
   left: 0;
   background-color: #2189bf;
 }
-
-
 
 /*  顶栏左侧logo
 ============================================================================ */
@@ -46,8 +42,6 @@
   display: inline-block;
 }
 
-
-
 /*  搜索栏
 ============================================================================ */
 .search {
@@ -57,7 +51,7 @@
   top: 17px;
   right: 158px;
   background: url(@ico-url) -0px -65px no-repeat;
-
+  
   .text {
     width: 262px;
     height: 26px;
@@ -68,7 +62,7 @@
     background: none;
     outline: none;
   }
-
+  
   .btn {
     width: 25px;
     height: 25px;
@@ -83,8 +77,6 @@
     }
   }
 }
-
-
 
 /*  登录
 ============================================================================ */
@@ -106,8 +98,6 @@
   }
 }
 
-
-
 /* ==========================================================================
  ===   侧边栏   ====================================================================
  ============================================================================ */
@@ -124,7 +114,6 @@
   background-color: #2a2e3d;
 }
 
-
 /* ==========================================================================
     用户区 (头像,姓名,关注,收藏)
  ============================================================================ */
@@ -132,8 +121,6 @@
   height: 150px;
   overflow: hidden;
 }
-
-
 
 /*  用户头像和名字
 ============================================================================ */
@@ -149,14 +136,12 @@
   }
 }
 
-
-
 /*  用户收藏和关注
 ============================================================================ */
 .user-info {
   margin-left: 60px;
   padding-top: 20px;
-
+  
   .collection, .follow {
     width: 32px;
     height: 30px;
@@ -164,21 +149,19 @@
     text-align: center;
     box-sizing: content-box;
   }
-
+  
   .follow {
     margin-left: 33px;
     padding-left: 30px;
     border-left: 1px solid #313545;
   }
-
+  
   a {
     font-size: 12px;
     color: #6a7c90;
     font-weight: bold;
   }
 }
-
-
 
 /* ==========================================================================
     侧栏下拉功能列表
@@ -190,7 +173,7 @@
   li {
     overflow: hidden;
   }
-
+  
   .header {
     display: block;
     padding-left: 42px;
@@ -199,18 +182,18 @@
     color: #6e8096;
     font-weight: bold;
   }
-
+  
   .active {
     background-color: #383d4e;
     .header {
       color: #ececef;
     }
   }
-
+  
   .active-show {
     padding-left: 65px;
     overflow: hidden;
-
+    
     > li {
       background: url("../images/sidebar-2-1.png") no-repeat;
     }
@@ -222,26 +205,24 @@
         color: #6e8096;
       }
     }
-
+    
     .active {
       background: url("../images/sidebar-2-2.png") no-repeat;
       > a {
         color: #ececef;
       }
     }
-
+    
     .active-show-show .active {
       background: none;
     }
-
+    
     .active-show-show {
       position: relative;
       top: 16px;
     }
   }
-
-
-
+  
   /*  侧栏下拉栏图标定义
   =========================================================================== */
   .header:before {
@@ -284,8 +265,6 @@
   }
 }
 
-
-
 /* ==========================================================================
  ===   主要内容区   ====================================================================
  ============================================================================ */
@@ -294,7 +273,7 @@
 ============================================================================ */
 .main-content-big-box {
   height: 1208px;
-  width:977px;
+  width: 977px;
   position: absolute;
   top: 60px;
   left: 260px;
@@ -302,8 +281,6 @@
   padding-left: 62px;
   background: #eeeeed;
 }
-
-
 
 /* ==========================================================================
     文档路径栏
@@ -324,11 +301,11 @@
     color: #b0b0b0;
     line-height: 32px;
   }
-
+  
   .cur-path {
     color: #6898c2;
   }
-
+  
   .root-path { margin-right: 10px }
   .mid-path:before,
   .cur-path:before {
@@ -337,8 +314,6 @@
     margin-right: 5px;
   }
 }
-
-
 
 /* ==========================================================================
     详细查询
@@ -351,42 +326,29 @@
   height: 87px;
   margin-top: 50px;
   padding-top: 16px;
-  overflow: hidden;
+  position: relative;
   background-color: #fff;
   border: 1px solid #dddee0;
-
-  .options-list-1 {
-    display: inline-block;
-    width: 70px;
-    height: 26px;
-    margin-left: 16px;
-    padding: 8px 0 0 8px;
-    float: left;
-    background: url("../images/search-detail-1.gif");
-  }
-
-  .options-list-2 {
-    display: inline-block;
-    width: 120px;
-    height: 26px;
-    margin-left: 16px;
-    padding: 8px 0 0 8px;
-    float: left;
-    background: url("../images/search-detail-2.gif");
-  }
-
+  
+  //.options-list-2 {
+  //  display: inline-block;
+  //  width: 120px;
+  //  height: 26px;
+  //  margin-left: 16px;
+  //  padding: 8px 0 0 8px;
+  //  float: left;
+  //  background: url("../images/search-detail-2.gif");
+  //}
+  
   .options-list-date {
     display: inline-block;
     width: 120px;
     height: 26px;
-    margin-left: 16px;
+    margin-left: 10px;
     padding: 8px 0 0 8px;
     float: left;
-    background: url("../images/search-detail-date.gif");
   }
 }
-
-
 
 /*  查询项
 ============================================================================ */
@@ -403,6 +365,51 @@
   }
 }
 
+/* 下拉菜单
+============================================================================ */
+.select {
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+}
+
+.item-select-input {
+  height: 26px;
+  position: relative;
+  text-indent: 8px;
+  border: 1px solid #d5d5d5;
+  border-radius: 2px 2px 0 0;
+  background: url("../images/downarrow.png") no-repeat 90% center;
+  &:focus{
+    border:1px solid #2189bf;
+  }
+}
+
+.isi-style-1 {
+  width: 70px;
+}
+.isi-style-2{
+  width:120px;
+}
+
+.select-content {
+  min-height: 40px;
+  max-height: 130px;
+  position: relative;
+  text-indent: 8px;
+  line-height: 26px;
+  z-index: 999;
+  overflow: auto;
+  background-color: #fff;
+  border: 1px solid #d5d5d5;
+  border-top: #fff;
+  border-radius: 0 0 2px 2px;
+  li:hover {
+    background-color: #6a7c90;
+    cursor: pointer;
+  }
+}
+
 
 
 /*  买方卖方
@@ -411,8 +418,8 @@
   width: 190px;
   display: inline-block;
   float: left;
+  position: relative;
   margin-left: 40px;
-  overflow: hidden;
   background: url("../images/search-detail-4.gif") no-repeat right;
   span {
     float: left;
@@ -423,14 +430,12 @@
   .buyer {
     width: 160px;
     height: 28px;
-    float: left;
-    overflow: hidden;
+    position: relative;
   }
   .saler {
     width: 160px;
     height: 28px;
-    float: left;
-    overflow: hidden;
+    position: relative;
   }
   .switch-btn {
     display: inline-block;
@@ -440,30 +445,43 @@
   }
 }
 
-
-
 /*  查询详细选项
 ============================================================================ */
 .ds-details {
-  width: 340px;
+  width: 390px;
+  height:61px;
   display: inline-block;
   float: left;
+  position: relative;
   margin-left: 16px;
-  overflow: hidden;
   > div {
-    overflow: hidden;
+    position: absolute;
     display: inline-block;
-    margin-left: 16px;
   }
+  .date{
+    top:0;
+    left:0;
+  }
+  .time{
+    top:0;
+    left:183px;
+  }
+  .people{
+    top:35px;
+    left:0;
+  }
+  .deals{
+    top:35px;
+    left:122px;
+  }
+  
   span {
     float: left;
     font-size: 12px;
     color: #b0b0b0;
-    line-height: 28px;
+    line-height: 26px;
   }
 }
-
-
 
 /*  提交按钮
 ============================================================================ */
@@ -476,8 +494,6 @@
   cursor: pointer;
   background: url("../images/search-detail-submit.gif");
 }
-
-
 
 /* ==========================================================================
     历史查询
@@ -499,8 +515,6 @@
   width: 754px;
   height: 100%;
 }
-
-
 
 /*  滑动模块
 ============================================================================ */
@@ -524,8 +538,6 @@
   background: url("../images/sprite.png") -0px -0px no-repeat;
 }
 
-
-
 /*  滑动遮罩
 ============================================================================ */
 .hs-wrapper {
@@ -536,8 +548,6 @@
   position: absolute;
   left: 35px;
 }
-
-
 
 /*  滑动内容
 ============================================================================ */
@@ -582,8 +592,6 @@
   }
 }
 
-
-
 /*  更多历史查询
 ============================================================================ */
 /*  查询按钮
@@ -595,8 +603,6 @@
   right: 0;
   background: url("../images/history-search-1.gif");
 }
-
-
 
 /* ==========================================================================
     当月统计
@@ -668,8 +674,6 @@
   }
 }
 
-
-
 /* ==========================================================================
     项目信息表
  ============================================================================ */
@@ -687,10 +691,9 @@
   width: 490px;
   height: 290px;
   margin: 12px auto;
-
   .nav {
     height: 28px;
-    a {
+    .nav-item {
       display: inline-block;
       position: relative;
       top: 2px;
@@ -701,9 +704,10 @@
       text-align: center;
       line-height: 28px;
       color: #535353;
-      border: 2px solid #fff;
+      border: 2px solid #f4f5f6;
       border-radius: 7px 7px 0 0;
       border-bottom: 2px solid #e7e9eb;
+      cursor: pointer;
     }
     a:hover {
       background-color: #fff;
@@ -711,33 +715,56 @@
       border-bottom: none;
       border-radius: 7px 7px 0 0;
     }
-  }
-  .table-border-box {
-    width: 490px;
-    height: 250px;
-    border: 2px solid #e7e9eb;
-    overflow: hidden;
-    border-radius: 7px;
-  }
-
-  .tab {
-    margin: 28px auto;
-    border-right: 1px solid #e7e9eb;
-    border-bottom: 1px solid #e7e9eb;
-    text-align: center;
-    color: #a5a5a5;
-  }
-  .tab td {
-    width: 100px;
-    border-left: 1px solid #e7e9eb;
-    border-top: 1px solid #e7e9eb;
-  }
-  .tab tr {
-    height: 28px;
+    .on-focus {
+      background-color: #fff;
+      border: 2px solid #e7e9eb;
+      border-bottom: none;
+      border-radius: 7px 7px 0 0;
+    }
   }
 }
 
+.table-border-box {
+  width: 490px;
+  height: 250px;
+  border: 2px solid #e7e9eb;
+  overflow: hidden;
+  border-radius: 0 0 7px 7px;
+}
 
+.pt-table-box .tab {
+  display: none;
+  margin: 28px auto;
+  border-right: 1px solid #e7e9eb;
+  border-bottom: 1px solid #e7e9eb;
+  text-align: center;
+  color: #a5a5a5;
+}
+
+.pt-table-box .on-show {
+  display: table;
+}
+
+.pt-table-box .tab td {
+  font-size: 12px;
+  font-family: 宋体;
+  width: 100px;
+  border-left: 1px solid #e7e9eb;
+  border-top: 1px solid #e7e9eb;
+}
+
+.pt-table-box .tab td:hover {
+  font-size: 12px;
+  font-family: 宋体;
+  background-color: #f4f5f6;
+  width: 100px;
+  border-left: 1px solid #e7e9eb;
+  border-top: 1px solid #e7e9eb;
+}
+
+.pt-table-box .tab tr {
+  height: 28px;
+}
 
 /* ==========================================================================
     项目搜索
@@ -775,7 +802,7 @@
     height: 42px;
     border-bottom: 1px solid #f4f5f4;
   }
-
+  
   .price {
     float: left;
     width: 96px;
@@ -789,14 +816,14 @@
       margin-left: 18px;
     }
   }
-
+  
   .charger {
     float: left;
     width: 184px;
     height: 42px;
     border-bottom: 1px solid #f4f5f4;
   }
-
+  
   .details {
     float: left;
     width: 100%;
@@ -847,8 +874,6 @@
   }
 }
 
-
-
 /* ==========================================================================
     日历
  ============================================================================ */
@@ -872,7 +897,7 @@
   height: 22px;
   margin: 0 auto;
   overflow: hidden;
-
+  
   .year-box {
     width: 64px;
     height: 22px;
@@ -927,7 +952,7 @@
       height: 22px;
     }
   }
-
+  
   .return-today-btn {
     display: inline-block;
     width: 64px;
@@ -963,7 +988,7 @@
       border: 1px solid #f7d463;
     }
   }
-
+  
   .date-tab-head {
     margin-bottom: 5px;
     td {
@@ -973,18 +998,16 @@
       font-size: 10px;
     }
   }
-
+  
   .weekend-num,
   .festival {
     color: red;
   }
-
+  
   .selected {
     border: 1px solid #f7d463;
   }
 }
-
-
 
 /* ==========================================================================
     汽车行业品牌榜
@@ -1006,12 +1029,15 @@
     text-align: left;
     padding-left: 30px;
   }
-  tr:hover{
-    background-color: #e7e9eb;
+  #no-hover-color {
+    background: #d5d7d9;
+  }
+  tr:hover {
+    background-color: #d5d7d9;
   }
   td {
     height: 24px;
-    border: 2px solid #e7e9eb;
+    border: 1px solid #e7e9eb;
   }
   .rank {
     width: 66px;
@@ -1042,7 +1068,7 @@
       }
     }
   }
-
+  
   .dazhong .color {
     width: 141px;
     background-color: #ed6e52;

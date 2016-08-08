@@ -1,0 +1,319 @@
+@charset "utf-8";
+/*
+ *   Created by Boyuan.   2016/5/27
+ */
+
+/* 变量定义 */
+/*----------------------------------------------------*/
+$center-width: 1180px;
+$margin-center: 0 auto;
+$font-color-w: #fdfef9;
+$font_color-b: #5c5c5c;
+$main-style-color: #00caab;
+$bg_color: #34495e;
+/* 顶部 */
+/*----------------------------------------------------*/
+.top {
+  height: 36px;
+  background-color: $bg_color;
+}
+
+.top-holder {
+  width: $center-width - 40px;
+  margin: 0 auto;
+  .left {
+    float: left;
+    height: 36px;
+    .ico {
+      width: 18px;
+      height: 16px;
+      margin-top: 8px;
+      background: url("../images/icons.png") no-repeat;
+    }
+    .p {
+      margin-left: 5px;
+    }
+  }
+  a {
+    @extend .left;
+    line-height: 36px;
+    display: block;
+    color: $font-color-w;
+    font-size: 14px;
+  }
+  .right {
+    float: right;
+    .separator {
+      margin: 0 20px;
+      line-height: 36px;
+      float: left;
+      color: $font-color-w;
+      font-size: 16px;
+    }
+    .slash {
+      @extend .separator;
+      margin: 0 4px;
+    }
+  }
+}
+
+/* 首部导航 */
+/*----------------------------------------------------*/
+.header {
+  width: $center-width;
+  margin: $margin-center;
+  padding: 10px 0;
+  img {
+    float: left;
+  }
+  .chose-sch {
+    float: left;
+    width: 150px;
+    height: 40px;
+    margin: 6px 0 0 18px;
+    padding-left: 20px;
+    border-left: 2px solid #ddd;
+    p {
+      font-size: 14px;
+      line-height: 14px;
+      color: $font_color-b;
+    }
+    a {
+      display: inline-block;
+      margin-top: 6px;
+      padding: 4px;
+      line-height: 12px;
+      border: 1px solid #ddd;
+      font-size: 12px;
+      color: #a0a0a0;
+    }
+  }
+  .nav {
+    float: right;
+    margin-right: 28px;
+    .in-this-page {
+      color: $main-style-color;
+    }
+    li {
+      float: left;
+      margin-left: 60px;
+      height: 52px;
+      line-height: 52px;
+    }
+    .talking-sort {
+      width: 110px;
+      background: url("../images/icons.png") no-repeat 100px -18px;
+      margin-right: -20px;
+    }
+    a {
+      font-size: 16px;
+      color: $font_color-b;
+    }
+  }
+}
+
+/* 内容区 */
+/*----------------------------------------------------*/
+/*
+/* 表单 */
+/*-----------------------------*/
+$input-border: 1px solid #e8e8e8;
+
+@mixin border-radius {
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+@mixin border-shadow {
+  @include border-radius;
+  box-shadow: 0 0 1px 2px $main-style-color;
+  -webkit-box-shadow: 0 0 1px 2px $main-style-color;
+  -moz-box-shadow: 0 0 1px 2px $main-style-color;
+  border: 1px solid $main-style-color;
+}
+
+.form-holder {
+  width: $center-width;
+  margin: 40px auto;
+  background: url("../images/talk_guide.gif") no-repeat right top;
+  .index-title {
+    display: inline-block;
+    line-height: 25px;
+    font-weight: normal;
+    font-size: 20px;
+    color: $font_color-b;
+    text-indent: 20px;
+    border-left: 3px solid $main-style-color;
+  }
+}
+
+.form-list {
+  padding: 26px 0 0 14px;
+  & > li {
+    margin-bottom: 24px;
+    width: 848px;
+    border-bottom: 1px dashed lighten($font_color-b, 45%);
+  }
+  .input {
+    margin: 0 0 24px 5px;
+  }
+  input[type="text"] {
+    display: inline-block;
+    margin-right: 5px;
+    height: 34px;
+    line-height: 34px;
+    font-size: 13px;
+    text-indent: 8px;
+    border: $input-border;
+    @include border-radius;
+    input::-moz-placeholder { font-size: 12px; color: lighten($font_color-b, 40%); }
+    input::-webkit-input-placeholder { font-size: 12px; color: lighten($font_color-b, 40%); }
+  }
+  input:focus {
+    @include border-shadow;
+  }
+  .title {
+    margin-right: 5px;
+    font-size: 16px;
+    color: lighten($font_color-b, 15%);
+  }
+  .must-be-formed:before {
+    position: relative;
+    top: 5px;
+    left: -5px;
+    content: "*";
+    color: #f27a7a;
+  }
+  .input-362px {
+    width: 362px;
+  }
+  .input-100px {
+    width: 100px;
+  }
+  .input-75px {
+    width: 75px;
+  }
+  .hint {
+    margin-left: 5px;
+    color: lighten($font_color-b, 30%);
+  }
+  .with-ico {
+    height: 20px;
+    line-height: 20px;
+    margin: 12px 0 0 70px;
+    text-indent: 20px;
+    color: lighten($font_color-b, 30%);
+    background: url("../images/icons.png") no-repeat -65px -81px;
+  }
+
+}
+
+.form-1 {
+  select {
+    width: 100px;
+    height: 30px;
+    margin-right: 5px;
+    padding: 0 14px 0 25px;
+    border: $input-border;
+    color: lighten($font_color-b, 30%);
+    @include border-radius;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("../images/icons.png") no-repeat 78px -102px;
+  }
+}
+
+.form-2 {
+  input[type="radio"] { display: none; }
+  label { cursor: pointer; }
+  .check-box {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("../images/radio.gif") no-repeat -14px 0;
+  }
+  input[type="radio"]:checked + span { background-position: 0 0; }
+}
+
+.form-3 {
+  .img-uploader {
+    display: inline-block;
+    width: 109px;
+    height: 72px;
+  }
+  #img-uploader {
+    display: none;
+  }
+  .img-uploader { margin: 18px 0 0 70px; }
+}
+
+.form-4 {
+  .talk-content {
+    margin: 8px 0 0 87px;
+  }
+  .submit {
+    display: block;
+    width: 102px;
+    height: 40px;
+    margin: 30px 0 0 565px;
+    background: url("../images/submit.jpg") no-repeat;
+  }
+  .RTE {
+    display: inline-block;
+  }
+}
+
+/* 底部信息栏
+/*----------------------------------------------------*/
+.footer {
+  width: 100%;
+  height: 140px;
+  background: $bg_color;
+}
+
+.footer-holder {
+  width: $center-width;
+  height: 100%;
+  margin: $margin-center;
+  .contact-icon {
+    float: left;
+    height: 100%;
+    padding: 46px 0;
+    img {
+      float: left;
+    }
+    @mixin social-contact {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+    }
+    .weibo {
+      @include social-contact;
+      margin: 5px 0 0 28px;
+      background: url("../images/icons.png") no-repeat -42px 0;
+    }
+    .weixin {
+      @include social-contact;
+      margin: 5px 0 0 14px;
+      background: url("../images/icons.png") no-repeat -42px -40px;
+    }
+  }
+  .about {
+    float: right;
+    height: 100%;
+    padding: 48px 0;
+    text-align: right;
+    a {
+      margin-left: 28px;
+      font-size: 14px;
+      color: $font-color-w;
+    }
+    p {
+      margin-top: 8px;
+      font-size: 12px;
+      color: $font-color-w;
+    }
+  }
+}

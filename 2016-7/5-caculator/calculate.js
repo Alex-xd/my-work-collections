@@ -2,7 +2,7 @@
  *     Created by Boyuan on 2016.7.29
  */
 
-window.onload = function () {
+window.onload = function() {
     activeCalculator();
 };
 
@@ -14,8 +14,8 @@ function activeCalculator() {
     //获取按钮
     var ca_index = 0;
 
-    var add = document.getElementById("add");   //1
-    var sub = document.getElementById("sub");   //2
+    var add = document.getElementById("add");
+    var sub = document.getElementById("sub");
     var mult = document.getElementById("multiple");
     var div = document.getElementById("division");
     var to_percent = document.getElementById("to-percent");
@@ -24,74 +24,84 @@ function activeCalculator() {
     var dot = document.getElementById("dot");
     var equal = document.getElementById("equal");
     var nums = new Array(10);
-    (function () {
+    (function() {
         for (var i = 0; i < 10; i++) {
             nums[i] = document.getElementById("num-" + String(i));
         }
     })();
 
     //绑定按钮事件
-    add.onclick = function () {
+    add.onclick = function() {
         result = val;
         val = "";
         ca_index = 1;
     };
-    sub.onclick = function () {
+    sub.onclick = function() {
         result = val;
         val = "";
         ca_index = 2;
     };
-    mult.onclick = function () {
+    mult.onclick = function() {
         result = val;
         val = "";
         ca_index = 3;
     };
 
-    div.onclick = function () {
+    div.onclick = function() {
         result = val;
         val = "";
         ca_index = 4;
     };
-    to_percent.onclick = function () {
-        val = val._toPercent();
-        output(val);
+    to_percent.onclick = function() {
         val = parseFloat(val);
-        result = val;
+        val = val / 100;
+        output(val * 100 + "%");
     };
-    not.onclick = function () {
+    not.onclick = function() {
         val = -val;
         result = val;
         output(result);
     };
-    AC.onclick = function () {
+    AC.onclick = function() {
         result = 0;
         val = "";
         output(result);
     };
-    dot.onclick = function () {
-        val = val + ".";
-        output(val);
+    dot.onclick = function() {
+        if (val.toString().split(".").length > 1) {
+            //判断是否已经为浮点数
+            output(val);
+        } else {
+            val = val + ".";
+            output(val);
+        }
     };
-    equal.onclick = function () {
+    equal.onclick = function() {
         switch (ca_index) {
             case 1:
+                val = parseFloat(val);
+                result = parseFloat(result);
                 result = result + val;
                 val = result;
                 output(result);
                 break;
             case 2:
+                val = parseFloat(val);
+                result = parseFloat(result);
                 result = result - val;
                 val = result;
                 output(result);
                 break;
             case 3:
-                result=Number(result);
+                val = parseFloat(val);
+                result = parseFloat(result);
                 result = result._mult(val);
                 val = result;
                 output(result);
                 break;
             case 4:
-                result=Number(result);
+                val = parseFloat(val);
+                result = parseFloat(result);
                 result = result._div(val);
                 val = result;
                 output(result);
@@ -99,30 +109,12 @@ function activeCalculator() {
         }
     };
 
-    // (function () {
-    //     for (var i = 0; i < nums.length; i++) {
-    //         nums[i].onclick = function (_i) {
-    //             return function () {
-    //                 val = val + _i.toString();
-    //                 val = Number(val);
-    //                 output(val);
-    //             }
-    //         }(i)
-    //     }
-    // })();
-
-    (function () {
+    //输入
+    (function() {
         for (var i = 0; i < nums.length; i++) {
-            nums[i].onclick = function (_i) {
-                return function () {
-                    if (val.toString().split(".")) {
-                        //判断为浮点数
-                        val = val + _i.toString();
-                    }
-                    else {
-                        val = val + _i.toString();
-                        val = Number(val);
-                    }
+            nums[i].onclick = function(_i) {
+                return function() {
+                    val = val + _i.toString();
                     output(val);
                 }
             }(i)
@@ -130,70 +122,51 @@ function activeCalculator() {
     })();
 
     //除法
-    Number.prototype._div = function (arg) {
+    Number.prototype._div = function(arg) {
         var r = this / arg;
 
-
-        if (typeof (r.toString().split(".")[1]) == "undefined")
+        if (typeof(r.toString().split(".")[1]) == "undefined")
             return r;
         if (r.toString().split(".")[1].length > 12) {
             r = r.toFixed(12);
+            r = parseFloat(r);
             return r;
         }
         return r;
     };
 
     //乘法
-    Number.prototype._mult = function (arg) {
+    Number.prototype._mult = function(arg) {
         var r = this * arg;
 
-        if (typeof (r.toString().split(".")[1]) == "undefined")
+        if (typeof(r.toString().split(".")[1]) == "undefined")
             return r;
-        if (r.toString().split(".")[1].length > 12) {
+        else if (r.toString().split(".")[1].length > 12) {
             r = r.toFixed(12);
+            r = parseFloat(r);
+            return r;
+        } else {
             return r;
         }
-        return r;
     };
 
 
     //百分数转换
-    Number.prototype._toPercent = function () {
+    Number.prototype._toPercent = function() {
         var r = this / 100;
 
-        if (typeof (r.toString().split(".")[1]) == "undefined")
+        if (typeof(r.toString().split(".")[1]) == "undefined")
             return r + "%";
-        if (r.toString().split(".")[1].length > 12) {
+        else if (r.toString().split(".")[1].length > 12) {
             r = r.toFixed(12);
+            r = parseFloat(r);
+            return r;
+        } else {
             return r + "%";
         }
-        return r + "%";
     };
-//     var nummm=90;
-// alert(nummm._toPercent());
+
     function output(something) {
         output_box.innerHTML = String(something);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,0 +1,390 @@
+/*
+ *   Created by ZhangBoyuan.   2016/5/17 0:52
+ */
+
+/* 顶部 */
+/*-----------------------------*/
+.top {
+  height:36px;
+  background-color:#34495e;
+}
+
+.top-holder {
+  width:1140px;
+  margin:0 auto;
+  a {
+    float:left;
+    display:block;
+    color:#fdfef9;
+    font-size:14px;
+    height:36px;
+    line-height:36px;
+  }
+  .left {
+    float:left;
+    height:36px;
+    .ico {
+      width:18px;
+      height:16px;
+      margin-top:10px;
+      background:url("../image/icons.png") no-repeat;
+    }
+    .p {
+      margin-left:5px;
+    }
+  }
+  .right {
+    float:right;
+    .separator {
+      margin:0 20px;
+      line-height:36px;
+      float:left;
+      color:#fdfef9;
+      font-size:16px;
+    }
+    .slash {
+      margin:0 4px;
+      line-height:36px;
+      float:left;
+      color:#fdfef9;
+      font-size:15px;
+    }
+  }
+}
+
+/* 首部导航 */
+/*-----------------------------*/
+.header {
+  width:1180px;
+  margin:0 auto;
+  padding:10px 0;
+  img {
+    float:left;
+  }
+  .chose-sch {
+    float:left;
+    width:108px;
+    height:40px;
+    margin:6px 0 0 18px;
+    padding-left:20px;
+    border-left:2px solid #ddd;
+    p {
+      font-size:14px;
+      line-height:14px;
+      color:#5c5c5c;
+    }
+    a {
+      display:inline-block;
+      margin-top:6px;
+      padding:4px;
+      line-height:12px;
+      border:1px solid #ddd;
+      font-size:12px;
+      color:#a0a0a0;
+    }
+  }
+  .nav {
+    float:right;
+    margin-right:28px;
+    li {
+      float:left;
+      margin-left:60px;
+      height:52px;
+      line-height:52px;
+    }
+    .talking-sort {
+      width:110px;
+      background:url("../image/icons.png") no-repeat 100px -16px;
+      margin-right:-20px;
+    }
+    a {
+      font-size:16px;
+      color:#5c5c5c;
+    }
+  }
+}
+
+/* banner */
+/*-----------------------------*/
+.banner {
+  height:340px;
+  background-color:#a5e7f3;
+}
+
+.banners-container {
+  position:absolute;
+  width:5900px;
+  height:340px;
+}
+
+.banner-wrapper {
+  position:relative;
+  width:1180px;
+  height:100%;
+  margin:0 auto;
+  overflow:hidden;
+  img {
+    float:left;
+  }
+  .btn {
+    position:absolute;
+    top:146px;
+    display:block;
+    width:24px;
+    height:48px;
+    filter:alpha(opacity=50%);
+    -moz-opacity:.5;
+    opacity:.5;
+    z-index:5;
+  }
+  .next {
+    right:0;
+    background:url("../image/icons.png") no-repeat -18px -48px;
+  }
+  .prev {
+    left:0;
+    background:url("../image/icons.png") no-repeat -18px 0;
+  }
+  #buttons {
+    position:absolute;
+    height:16px;
+    width:100px;
+    bottom:10px;
+    left:590px;
+  }
+  #buttons span {
+    float:left;
+    border:1px solid #fff;
+    width:16px;
+    height:16px;
+    margin-right:15px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    background:#fff;
+    cursor:pointer;
+  }
+  #buttons .on {
+    border-color:#5c5c5c;
+    background:#5c5c5c;
+  }
+}
+
+/* 内容区 */
+/*----------------------------------------------------*/
+/*
+/* 玩法大揭秘 */
+/*-----------------------------*/
+.content {
+  width:1180px;
+  margin:0 auto;
+  .index-title {
+    display:inline-block;
+    margin-top:20px;
+    line-height:32px;
+    font-weight:normal;
+    font-size:20px;
+    color:#5c5c5c;
+    text-indent:20px;
+    border-left:6px solid #00caab;
+  }
+}
+
+.content-top {
+  position:relative;
+  width:100%;
+  height:418px;
+  overflow:hidden;
+  img {
+    margin:36px 20px 0 20px;
+  }
+  a {
+    position:absolute;
+    display:inline-block;
+    width:90px;
+    height:32px;
+    margin-top:26px;
+    line-height:28px;
+    text-align:center;
+    font-size:14px;
+    font-weight:500;
+    word-spacing:2px;
+    border:2px solid #00caab;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+  }
+  .listen {
+    left:440px;
+    color:#00caab;
+  }
+  .talk {
+    left:650px;
+    background-color:#00caab;
+    color:#fff;
+  }
+  .active {
+    background-color:#00caab;
+    color:#fff;
+  }
+  .no-active {
+    background-color:#fff;
+    color:#00caab;
+  }
+}
+
+/* 精品Talking专区
+/*-----------------------------*/
+.content-middle {
+  width:100%;
+  overflow:hidden;
+}
+
+.scroll-wrapper {
+  position:relative;
+  width:1180px;
+  height:200px;
+  margin:18px auto 0;
+  overflow:hidden;
+  .next, .prev {
+    position:absolute;
+    top:78px;
+    display:block;
+    width:24px;
+    height:48px;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    opacity:0.5;
+  }
+  .next {
+    right:0;
+    background:url("../image/icons.png") no-repeat -18px -48px;
+  }
+  .prev {
+    left:0;
+    background:url("../image/icons.png") no-repeat -18px 0;
+  }
+}
+
+.scroll-container {
+  position:absolute;
+  width:6000px;
+  height:205px;
+  ul {
+    float:left;
+  }
+  li {
+    float:left;
+    margin-right:20px;
+  }
+}
+
+/* 大牛们都在这儿
+/*-----------------------------*/
+.content-bottom {
+  width:100%;
+  overflow:hidden;
+  .more{
+    float:right;
+    color:#00caab;
+    font-size:16px;
+    margin:40px 12px 0 0;
+  }
+}
+
+.big-persons {
+  width:1200px;
+  margin-top:20px;
+  li {
+    float:left;
+    width:380px;
+    height:140px;
+    margin:0 20px 20px 0;
+    padding:24px 0 24px 24px;
+    border:1px solid #ddd;
+    img {
+      float:left;;
+    }
+  }
+}
+
+.person-info {
+  float:left;
+  margin-left:20px;
+  * {
+    font-size:14px;
+    color:#5e5e5e;
+  }
+  .name {
+    display:block;
+    font-size:16px;
+  }
+  .school {
+    font-size:14px;
+  }
+  .separator {
+    position:relative;
+    top:3px;
+    display:inline-block;
+    width:1px;
+    height:12px;
+    margin:2px 22px;
+    background-color:#5e5e5e;
+  }
+  .space {
+    margin-top:10px;
+  }
+}
+
+/* 底部信息栏
+/*-----------------------------*/
+.footer {
+  height:140px;
+  background:#34495e;
+}
+
+.footer-holder {
+  width:1180px;
+  height:100%;
+  margin:0 auto;
+  .contact-icon {
+    float:left;
+    height:100%;
+    padding:46px 0;
+    img {
+      float:left;
+    }
+    .weibo {
+      display:inline-block;
+      width:40px;
+      height:40px;
+      margin:5px 0 0 28px;
+      background:url("../image/icons.png") no-repeat -42px 0;
+    }
+    .weixin {
+      display:inline-block;
+      width:40px;
+      height:40px;
+      margin:5px 0 0 14px;
+      background:url("../image/icons.png") no-repeat -42px -40px;
+    }
+  }
+  .about {
+    float:right;
+    height:100%;
+    padding:48px 0;
+    text-align:right;
+    a {
+      margin-left:28px;
+      font-size:14px;
+      color:#fff;
+    }
+    p {
+      margin-top:8px;
+      font-size:12px;
+      color:#fff;
+    }
+  }
+}
+
+/* 总算写完了 TAT */

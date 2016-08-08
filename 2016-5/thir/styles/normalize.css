@@ -1,0 +1,45 @@
+/*
+*    Created by ZhangBoyuan.   2016/5/17 0:52
+*    样式重置
+*/
+
+* {
+    padding:0;
+    margin:0;
+    font-family:arial, "Microsoft YaHei", sans-serif;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+li {
+    list-style:none;
+}
+
+img {
+    border:none;
+}
+
+a {
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:none;
+    cursor:pointer;
+}
+
+img:hover { cursor:pointer; }
+
+*:focus {
+    outline:none;
+}
+
+.clear-float:after {
+    content:'';
+    width:0;
+    height:0;
+    display:block;
+    clear:both;
+}
+
