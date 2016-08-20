@@ -29,4 +29,8 @@
 
 [天气预报(ajax)](http://boyuanblog.com/My-Work-Collections/2016-7/6-weather-ajax/weather-5-days.html)
 
+- - -
+## 其他
+
 [BEM,OOCSS,SMACSS设计模式实践](http://boyuanblog.com/My-Work-Collections/2016-8/SMACSS/test.html)
+
