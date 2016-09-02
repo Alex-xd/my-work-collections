@@ -1,6 +1,7 @@
 # See what I'v done;
 
-## 静态页面
+## 项目
+
 [静态页面1](http://boyuanblog.com/my-work-collections/2016-5/fir/webPage/index.html)
 
 [静态页面2](http://boyuanblog.com/my-work-collections/2016-5/sec/myCampussay/index.html)
@@ -9,6 +10,9 @@
 
 [静态页面4](http://boyuanblog.com/my-work-collections/2016-7/0-static-page/page1/index.html)
 
+[勤奋峰团队介绍 (2人合作开发)](http://boyuanblog.com/bees/)
+
+[网易教育产品部首页（独立开发） （网易前端微专业结课大作业）](http://boyuanblog.com/NetEaseEDU/)
 
 ## JS小玩意
 [滑动运动](http://boyuanblog.com/my-work-collections/2016-7/little-practice/滑动运动.html)
