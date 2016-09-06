@@ -1,6 +1,4 @@
-# See what I'v done;
-
-## 项目
+## pages
 
 [静态页面1](http://boyuanblog.com/my-work-collections/2016-5/fir/webPage/index.html)
 
@@ -10,11 +8,12 @@
 
 [静态页面4](http://boyuanblog.com/my-work-collections/2016-7/0-static-page/page1/index.html)
 
-[勤奋峰团队介绍 (2人合作开发)](http://boyuanblog.com/bees/)
+[动态页练习（初学作品，写的很烂，一堆BUG）](http://boyuanblog.com/bees/)
 
 [网易教育产品部首页（独立开发） （网易前端微专业结课大作业）](http://boyuanblog.com/NetEaseEDU/)
 
-## JS小玩意
+## others
+
 [滑动运动](http://boyuanblog.com/my-work-collections/2016-7/little-practice/滑动运动.html)
 
 [匀速运动](http://boyuanblog.com/my-work-collections/2016-7/little-practice/匀速运动.html)
@@ -32,9 +31,6 @@
 [计时器](http://boyuanblog.com/my-work-collections/2016-7/3-the-countdown/countdown.html)
 
 [天气预报(ajax)](http://boyuanblog.com/my-work-collections/2016-7/6-weather-ajax/weather-5-days.html)
-
-- - -
-## 其他
 
 [BEM,OOCSS,SMACSS设计模式实践](http://boyuanblog.com/my-work-collections/2016-8/SMACSS/test.html)
 
