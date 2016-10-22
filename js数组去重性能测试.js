@@ -96,20 +96,26 @@ function duplicates5(arr) {
 //-----------------------------
 function benchmark(f1, f2, f3, f4, f5) {
     var sum = [0, 0, 0, 0, 0],
-        count = 1;
+        count = 10,
+        testArray = [];
+
+    for (var i = 0; i < 10000; i++) {
+        testArray[i] = Math.floor(Math.random() * 24);
+    }
+
     for (var i = 0; i < sum.length; i++) {
         for (var j = 0; j < count; j++) {
-            sum[i] += test(arguments[i]([1, 2, 4, 4, 3, 3, 1, 5, 3]));
+            sum[i] += test(arguments[i](testArray));
             console.log('计算中...');
         }
         sum[i] /= count;
     }
 
     sum.forEach(function(e, i, a) {
-        console.info('方法 ' + (i+1) + ' 的单位时间（1秒）内平均运算量: ' + e + '次');
+        console.info('方法 ' + (i + 1) + ' 的单位时间（1秒）内平均运算量: ' + e + '次');
     })
 
-    
+
 
     function test(func) {
         var hz,
@@ -133,4 +139,4 @@ function benchmark(f1, f2, f3, f4, f5) {
 }
 
 
-benchmark(duplicates1,duplicates2,duplicates3,duplicates4,duplicates5);
+benchmark(duplicates1, duplicates2, duplicates3, duplicates4, duplicates5);
