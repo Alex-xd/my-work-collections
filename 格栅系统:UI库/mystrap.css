@@ -1,0 +1,74 @@
+.grid-container,
+.row,
+[class*='col-']{
+    box-sizing:border-box;
+}
+
+/* cleafix */
+.row:before,
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    width: 16.66%;
+    /* gutter */
+    padding: 12px;
+    background-color: #c4c4c4;
+}
+
+.col-1 { width: 16.66%; }
+
+.col-2 { width: 33.33%; }
+
+.col-3 { width: 50%; }
+
+.col-4 { width: 66.66%; }
+
+.col-5 { width: 83.33%; }
+
+.col-6 { width: 100%; }
+
+.outline, .outline * {
+    outline: 1px solid #666;
+}
+
+/*-- some extra column content styling --*/
+[class*='col-'] > p {
+    background-color: #d5d7d9;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+@media all and (max-width:800px){
+    .col-1{ width: 33.33%;    }
+    .col-2{ width: 50%;        }
+    .col-3{ width: 83.33%;    }
+    .col-4{ width: 100%;    }
+    .col-5{ width: 100%;    }
+    .col-6{ width: 100%;      }
+
+    /*FIXME:如果一行内仅有两个col-2就会有bug  第二个col-2的width会撑满*/
+    .row .col-2:last-of-type{
+        width: 100%;
+    }
+
+    .row .col-5 ~ .col-1{
+        width: 100%;
+    }
+}
+
+@media all and (max-width:650px){
+    .col-1{ width: 50%;        }
+    .col-2{ width: 100%;    }
+    .col-3{ width: 100%;    }
+    .col-4{ width: 100%;    }
+    .col-5{ width: 100%;    }
+    .col-6{ width: 100%;      }
+}
