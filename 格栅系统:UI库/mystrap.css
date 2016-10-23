@@ -54,11 +54,6 @@
     .col-5{ width: 100%;    }
     .col-6{ width: 100%;      }
 
-    /*FIXME:如果一行内仅有两个col-2就会有bug  第二个col-2的width会撑满*/
-    .row .col-2:last-of-type{
-        width: 100%;
-    }
-
     .row .col-5 ~ .col-1{
         width: 100%;
     }
