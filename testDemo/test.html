@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
+    <script src="../jquery.js"></script>
 </head>
 
 <body>
     <button id="te">123</button>
     <script>
-    document.getElementById("te").onclick = function(e) {
-        console.log(e.result)
-    }
-    document.getElementById("te").click();
+  		$('#te').on('click',function(){
+  			console.log(this);
+  		})
     </script>
 </body>
 
