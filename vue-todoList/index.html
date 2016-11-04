@@ -23,7 +23,7 @@
             <div class="input-group">
                 <label></label>
                 <button @click="addTodo">Add</button>
-                <span class="tips" v-cloak>{{tips}}</span>
+                <span class="tips">{{tips}}</span>
             </div>
             <img src="http://o6x2vif88.bkt.clouddn.com/6381CBD509069C53F7057A09CBE641BC.jpg" alt="our pic" class="pic">
         </fieldset>
@@ -36,7 +36,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="todo in todos" v-cloak>
+                <tr v-for="todo in todos">
                     <td>{{todo.name}}</td>
                     <td>{{todo.deadline}}</td>
                     <td :class="'text-center'">
