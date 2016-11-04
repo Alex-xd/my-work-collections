@@ -3,41 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Todododododododo</title>
+    <title>My todo list</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-    <div class="todolist">
+    <div id="todolist">
         <fieldset>
-            <legend>Todododododododo</legend>
+            <legend>Gift for my sweet heart 超超♥︎</legend>
             <div class="input-group">
-                <label for="todo-name">todo</label>
-                <input type="text" id="input-name">
+                <label for="todo-name">Together we will do:</label>
+                <input type="text" id="input-name" v-model="newTodo.name">
             </div>
             <div class="input-group">
-                <label for="input-deadline">dead line</label>
-                <input type="date" id="input-deadline">
+                <label for="input-deadline">due date:</label>
+                <input type="date" id="input-deadline" v-model="newTodo.deadline">
             </div>
-            <button>Add</button>
-            <table>
-                <thead>
-                    <tr>
-                        <td>Todos</td>
-                        <td>Dead Line</td>
-                        <td>Delete</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>吃饭</td>
-                        <td>10.10</td>
-                        <td>
-                            <button>Delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="input-group">
+                <label></label>
+                <button @click="addTodo">Add</button>
+                <span class="tips">{{tips}}</span>
+            </div>
+            <img src="http://o6x2vif88.bkt.clouddn.com/UNADJUSTEDNONRAW_thumb_2e9.jpg" alt="our pic" class="pic">
         </fieldset>
+        <table>
+            <thead>
+                <tr>
+                    <th>Todos</th>
+                    <th>Due date</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="todo in todos">
+                    <td>{{todo.name}}</td>
+                    <td>{{todo.deadline}}</td>
+                    <td :class="'text-center'">
+                        <button @click="removeTodo($index)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <script src="vue.js"></script>
     <script src="app.js"></script>
