@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <template>
     <div id="todolist">
         <fieldset>
             <legend>Gift for my sweet heart 超超♥︎</legend>
@@ -24,7 +23,7 @@
             <div class="input-group">
                 <label></label>
                 <button @click="addTodo">Add</button>
-                <span class="tips">{{tips}}</span>
+                <template><span class="tips">{{tips}}</span></template>
             </div>
             <img src="http://o6x2vif88.bkt.clouddn.com/6381CBD509069C53F7057A09CBE641BC.jpg" alt="our pic" class="pic">
         </fieldset>
@@ -47,7 +46,6 @@
             </tbody>
         </table>
     </div>
-    </template>
     <script src="vue.min.js"></script>
     <script src="app.js"></script>
 </body>
