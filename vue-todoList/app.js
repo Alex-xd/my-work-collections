@@ -17,7 +17,7 @@ var todolist = new Vue({
                     name: '',
                     deadline: ''
                 }
-                
+
             } else {
                 this.tips = 'please enter something~';
             }

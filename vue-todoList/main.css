@@ -146,3 +146,6 @@ button:hover {
 	}
 }
 
+[v-cloak]{
+	display: none;
+}
