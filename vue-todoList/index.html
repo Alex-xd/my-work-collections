@@ -37,8 +37,8 @@
             </thead>
             <tbody>
                 <tr v-for="todo in todos">
-                    <td>{{todo.name}}</td>
-                    <td>{{todo.deadline}}</td>
+                    <template><td>{{todo.name}}</td></template>
+                    <template><td>{{todo.deadline}}</td></template>
                     <td :class="'text-center'">
                         <button @click="removeTodo($index)">Done</button>
                     </td>
