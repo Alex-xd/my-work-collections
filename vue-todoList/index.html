@@ -36,13 +36,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="todo in todos">
-                    <td>{{todo.name}}</td>
-                    <td>{{todo.deadline}}</td>
-                    <td :class="'text-center'">
-                        <button @click="removeTodo($index)">Done</button>
-                    </td>
-                </tr>
+                <template>
+                    <tr v-for="todo in todos">
+                        <td>{{todo.name}}</td>
+                        <td>{{todo.deadline}}</td>
+                        <td :class="'text-center'">
+                            <button @click="removeTodo($index)">Done</button>
+                        </td>
+                    </tr>
+                </template>
             </tbody>
         </table>
     </div>
