@@ -96,8 +96,7 @@ button:hover {
     text-align: right;
 }
 
-.input-group > input,
-.input-group > select {
+.input-group > input {
     display: inline-block;
     height: 2.5rem;
     line-height: 2.5rem;
@@ -150,4 +149,17 @@ button:hover {
 	.pic{
 		display: none;
 	}
+}
+@media all and (max-width:308px){
+	.input-group,
+	.input-group>label,
+	.input-group > input{
+		text-align: center;
+	}
+	
+	button{
+		position: relative;
+		
+	}
+	
 }
