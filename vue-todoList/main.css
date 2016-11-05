@@ -156,10 +156,12 @@ button:hover {
 	.input-group > input{
 		text-align: center;
 	}
-	
+	.input-group{
+		margin-right: 0;
+	}
 	button{
 		position: relative;
-		
+		left:-66px;
 	}
 	
 }
