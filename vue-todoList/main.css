@@ -146,3 +146,8 @@ button:hover {
 	}
 }
 
+@media all and (max-width:402px){
+	.pic{
+		display: none;
+	}
+}
