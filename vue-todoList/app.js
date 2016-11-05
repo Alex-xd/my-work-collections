@@ -1,3 +1,20 @@
+Vue.component('todo-item',{
+    template:`
+        <tr>
+            <td>{{todo.name}}</td>
+            <td>{{todo.deadline}}</td>
+            <td class="text-center">
+                <button @click="removeTodo(index)">Done</button>
+            </td>
+        </tr>
+    `,
+    props:['todo','index'],
+    methods:{//TODO:这里直接引用了todolist实例，不能良好解耦，再想想
+        removeTodo: function(index) {
+            todolist.todos.splice(index, 1);
+        }
+    }
+});
 var todolist = new Vue({
     el: '#todolist',
     data: {
@@ -25,9 +42,6 @@ var todolist = new Vue({
             if (!this.deadline) {
                 this.newTodo.deadline = '∞';
             }
-        },
-        removeTodo: function(index) {
-            this.todos.splice(index, 1);
         }
     }
 });
