@@ -8,32 +8,33 @@
 </head>
 
 <body>
-    <div id="app1">
-        <ol>
-            <todo v-for="todo in todos" v-bind:todo="todo"></todo>
-        </ol>
+    <div id="app">
+        <input type="text" :value="fullname">
+        {{setted}}
     </div>
     <script>
-    Vue.component('todo', {
-        props: ['todo'],
-        template: '<li>{{todo.text}}</li>'
-    })
-    var app1 = new Vue({
-        el: '#app1',
+    var vm = new Vue({
+        el: '#app',
         data: {
-            todos: [{
-                text: 'eat'
-            }, {
-                text: 'drink'
-            }, {
-                text: 'studys'
-            }]
+            firstname: 'Alex',
+            lastname: 'Zhang',
+            fullname: '',
+            setted:''
+        },
+        computed: {
+            fullname: {
+                get: function(val) {
+                    return this.firstname + ' ' + this.lastname;
+                },
+                set:function(val){
+                    this.setted=val;
+                }
+            }
+
         }
-    })
+    });
+    vm.fullname="123312321"
     </script>
 </body>
 
 </html>
-
-
-
