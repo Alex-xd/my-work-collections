@@ -9,8 +9,7 @@
 
 <body>
     <div id="app">
-        <input type="text" :value="fullname">
-        {{setted}}
+        <input type="text" :value="fullname"> {{setted}}
     </div>
     <script>
     var vm = new Vue({
@@ -19,21 +18,21 @@
             firstname: 'Alex',
             lastname: 'Zhang',
             fullname: '',
-            setted:''
+            setted: ''
         },
         computed: {
             fullname: {
                 get: function(val) {
                     return this.firstname + ' ' + this.lastname;
                 },
-                set:function(val){
-                    this.setted=val;
+                set: function(val) {
+                    this.setted = val;
                 }
             }
 
         }
     });
-    vm.fullname="123312321"
+    vm.fullname = "123312321"
     </script>
 </body>
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+    	<component-1>
+    		<h2 slot="header">header slot in</h2>
+    		<p>lalalal</p>
+    		<p>lalalalla</p>
+    		<p>adssaddasd</p>
+    		<h4 slot="footer">footer slot in</h4>
+    	</component-1>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    Vue.component('component-1', {
+        template: `
+		<div>
+            <header>
+                <slot name="header"></slot>
+            </header>
+            <main>
+            	<slot></slot>
+            </main>
+            <footer>
+            	<slot name="footer"></slot>
+            </footer>
+        </div>
+		`
+    })
+    new Vue({
+    	el:'#app'
+    })
+    </script>
+</body>
+
+</html>
