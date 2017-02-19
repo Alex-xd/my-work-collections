@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>component</title>
+    <script src='vue.js'></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" :value="fullname"> {{setted}}
+    </div>
+    <script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            firstname: 'Alex',
+            lastname: 'Zhang',
+            fullname: '',
+            setted: ''
+        },
+        computed: {
+            fullname: {
+                get: function(val) {
+                    return this.firstname + ' ' + this.lastname;
+                },
+                set: function(val) {
+                    this.setted = val;
+                }
+            }
+
+        }
+    });
+    vm.fullname = "123312321"
+    </script>
+</body>
+
+</html>

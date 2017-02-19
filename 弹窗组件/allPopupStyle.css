@@ -1,0 +1,115 @@
+@charset 'UTF-8';
+
+/** 
+ * 弹窗框框架子 & 遮罩层
+ *
+ * 此层应只关注结构上的样式，不涉及内容样式，做到结构与内容样式分离
+ */
+
+.popup-basic {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin:auto;
+    background: #fff;
+}
+
+.popup-basic-close {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url('./close.gif') no-repeat;
+}
+
+.popup-basic-masklayer {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .5;
+    background: #000;
+    filter: alpha(opacity=50);
+}
+
+
+/**
+ * 内容样式层
+ * 
+ * 各种自定义弹窗的内容样式，不要在这一层定义结构样式
+ */
+
+
+/* 登录弹窗
+--------------------*/
+
+.popup-login h2 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 29px;
+    margin-bottom: 20px;
+    margin-left: 37px;
+    color: $darkGray;
+}
+
+.popup-login input {
+    display: inline-block;
+    width: 293px;
+    height: 43px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    text-indent: 4px;
+    border: 1px solid #dfdfdf;
+    background: #fafafa;
+    box-shadow: inset -1px -1px 1px #f1f1f1;
+}
+
+.popup-login button {
+    font-size: 16px;
+    width: 293px;
+    height: 46px;
+    margin-left: 40px;
+    color: #fff;
+    border: none;
+    background: url('./login-btn.gif') no-repeat;
+    box-shadow: 2px 2px 0 #d5e3da;
+}
+
+
+/* 提示弹窗
+width: 200px;
+height: 60px;
+--------------------*/
+
+.popup-tips {
+    font-size: 16px;
+    line-height: 60px;
+    text-align: center;
+    color: $darkGray;
+    border-radius: 5px;
+}
+
+
+/* 播放视频弹窗
+width: 950px;
+height: 676px;
+--------------------*/
+
+.popup-video h2 {
+    font-size: 18px;
+    line-height: 18px;
+    margin: 31px 0 17px 31px;
+    color: $darkGray;
+}
+
+.popup-video .video {
+    width: 887px;
+    margin: 0 auto;
+}

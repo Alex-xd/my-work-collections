@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*.v-enter-active {
+        transition: all 1s cubic-bezier(1, -0.9, 0.46, 0.79);
+    }
+    
+    .v-leave-active {
+        transition: all 1s cubic-bezier(1, -0.9, 0.46, 0.79);
+    }*/
+    
+    .list-item {
+        transition: all 1s;
+        display: inline-block;
+    }
+    
+    .v-enter,
+    .v-leave-active {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+    
+    button {
+        margin: 5px;
+    }
+    
+    #example-1 {
+        padding: 50px;
+        border: 2px solid #20caab;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    
+    .wrap {
+        width: 600px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="example-1">
+        <button @click="add">add</button>
+        <button @click="remove">remove</button>
+        <div class="wrap">
+            <transition-group tag="div">
+                <button v-for="number in numbers" :key="number" class="list-item">
+                    {{number}}
+                </button>
+            </transition-group>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    new Vue({
+        el: '#example-1',
+        data: {
+            numbers: [1, 2, 3, 4, 5]
+        },
+        methods: {
+            add: function() {
+            	var num=this.randomOne();
+                this.numbers.splice(num, 0, num);
+            },
+            remove: function() {
+                this.numbers.splice(this.randomOne(), 1);
+            },
+            randomOne: function() {
+                return Math.floor(Math.random() * (this.numbers.length));
+            }
+        }
+
+    })
+    </script>
+</body>
+
+</html>

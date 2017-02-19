@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .header {
+        width: 100%;
+        background: #384259;
+    }
+    
+    .menu-btn {
+        display: inline-block;
+        background: #F73859;
+        text-decoration: none;
+        color: #fff;
+        line-height: 40px;
+        width: 60px;
+        text-align: center;
+        font-family: cursive, Helvetica, 'Microsoft YaHei', STXihei, sans-serif;
+        transition: all .4s;
+    }
+    
+    .menu-btn:focus,
+    .menu-btn:hover {
+        background-color: #7AC7C4;
+    }
+    
+    .app-menu {
+        width: 300px;
+        background-color: #C4EDDE;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        /*left: -300px;*/    /*用left会影响布局阶段，会触发重新计算布局*/
+        /*transition: left 300ms linear;*/
+
+        transform: translateX(-100%);  /*transform只影响合成阶段（composite），遂FPS更高*/
+        will-change: transform;  /*GPU加速进一步加速*/
+        transition: transform 300ms linear;
+    }
+    
+    .app-menu-open.app-menu {
+        /*left: 0px;*/
+        transform: none;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="header">
+            <a href="javascript:;" class="menu-btn" id="J_menu-btn">Menu</a>
+        </div>
+        <div class="app-menu" id="J_menu-panel"></div>
+    </div>
+</body>
+<script>
+var mPanel = document.getElementById('J_menu-panel'),
+    mBtn = document.getElementById('J_menu-btn');
+
+mBtn.addEventListener('focus', function() {
+    mPanel.className = 'app-menu app-menu-open'
+}, false);
+
+mBtn.addEventListener('blur', function() {
+    mPanel.className = 'app-menu'
+}, false);
+
+</script>
+
+</html>
+

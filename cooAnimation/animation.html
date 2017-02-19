@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    .img-box {
+        transform: translate3d(-50%, -50%, 0);
+        position: absolute;
+    }
+    
+    .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .img-01 {
+        left: -14px;
+        top: -4px;
+    }
+    
+    .img-02 {
+        top: 40px;
+        left: 58px;
+    }
+    
+    .img-03 {
+        transform: rotate(-6deg);
+        top: -4px;
+        left: 69px;
+        transform-origin: 96% 69%;
+        animation: tr_img_03 1.8s 1.2s forwards;
+    }
+    
+    .img-04 {
+        transform: rotate(-12deg);
+        top: -38px;
+        left: 97px;
+        transform-origin: 96% 75%;
+        animation: tr_img_04 1.8s .9s forwards;
+    }
+    
+    .img-05 {
+        transform: rotate(-18deg);
+        top: -69px;
+        left: 131px;
+        transform-origin: 97% 80%;
+        animation: tr_img_05 1.8s .6s forwards;
+    }
+    
+    .img-06 {
+        transform: rotate(-24deg);
+        top: -94px;
+        left: 168px;
+        transform-origin: 97% 84%;
+        animation: tr_img_06 1.8s .3s forwards;
+    }
+    
+    .img-07 {
+        transform: rotate(-30deg);
+        top: -115px;
+        left: 241px;
+        transform-origin: 88% 99%;
+        animation: tr_img_07 1.8s 0s forwards;
+    }
+    
+    @keyframes tr_img_03 {
+        0% {
+            transform: rotate(-6deg) translate(0px, 0px);
+        }
+        100% {
+            transform: rotate(0deg) translate(3px, 0px);
+        }
+    }
+    
+    @keyframes tr_img_04 {
+        0% {
+            transform: rotate(-12deg) translate(0px, 0px);
+        }
+        100% {
+            transform: rotate(0deg) translate(3px, 2px);
+        }
+    }
+    
+    @keyframes tr_img_05 {
+        0% {
+            transform: rotate(-18deg) translate(0px, 0px);
+        }
+        100% {
+            transform: rotate(0deg) translate(6px, 5px);
+        }
+    }
+    
+    @keyframes tr_img_06 {
+        0% {
+            transform: rotate(-24deg) translate(0px, 0px);
+        }
+        100% {
+            transform: rotate(0deg) translate(19px, 5px);
+        }
+    }
+    
+    @keyframes tr_img_07 {
+        0% {
+            transform: rotate(-30deg) translate(0px, 0px);
+        }
+        100% {
+            transform: rotate(0deg) translate(-5px, 6px);
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="img-box">
+        <img src="./phone_img_01.png" class="img img-01">
+        <img src="./phone_img_02.png" class="img img-02">
+        <img src="./phone_img_03.png" class="img img-03">
+        <img src="./phone_img_04.png" class="img img-04">
+        <img src="./phone_img_05.png" class="img img-05">
+        <img src="./phone_img_06.png" class="img img-06">
+        <img src="./phone_img_07.png" class="img img-07">
+    </div>
+</body>
+
+</html>
+

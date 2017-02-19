@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <div id="a" data-id="1E02">demo</div>
+
+    <script>
+        var $dom = $('#a');
+        $dom.html($('#a').data('id'));
+        $dom.data('someData',{a:1,b:2,c:3});  // 设定的someData并不会创建dom元素的data-someData属性，只是在底部开辟了一个命名空间，所以用户是看不到的。
+        console.log($dom.attr('someData'));  // undefined
+        console.log($dom.data('someData'));  // Object {a: 1, b: 2, c: 3}
+    </script>
+</body>
+</html>

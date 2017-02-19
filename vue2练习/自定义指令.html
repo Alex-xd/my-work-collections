@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div v-alexxd="message"></div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    Vue.directive('alexxd', {
+        bind: function(el, binding, vnode) {
+            var s = el.innerHTML =
+                `name: ${binding.name} </br>
+                 value: ${binding.value} </br>
+                 expression: ${binding.expression} </br>
+                 argument: ${binding.argument} </br>
+                 modifiers: ${JSON.stringify(binding.modifiers)} </br>
+                 vnode: ${Object.keys(vnode).join(', ')}`
+        }
+    })
+    new Vue({
+        el: '#app',
+        data: {
+            message: "Alex!"
+        }
+    });
+    </script>
+</body>
+
+</html>

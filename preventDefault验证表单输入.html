@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>preventDefault example</title>
+</head>
+
+<body>
+    <p>请输入一些字母,只允许小写字母.</p>
+    <form>
+        <input type="text" id="my-textbox" />
+    </form>
+    <script type="text/javascript">
+    function checkName(evt) {
+        var charCode = evt.charCode;
+        if (charCode != 0) {
+            if (charCode < 97 || charCode > 122) {
+                evt.preventDefault();
+                alert("只能输入小写字母." + "\n" + "charCode: " + charCode + "\n");
+            }
+        }
+    }
+    document.getElementById('my-textbox').addEventListener(
+        'keypress', checkName, false
+    );
+    </script>
+</body>
+
+</html>
